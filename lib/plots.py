@@ -60,7 +60,7 @@ def plotFigure3d(sMatrix):
     plt.title("Similarity of occluded toluene to learned toluene", fontsize=fsize); 
     plt.show()
 
-def plotFigure4a(gammaCode): 
+def plotFigure4a(gammaCode, nMCs = 72): 
     plt.figure(1, figsize=(6, 20))
     nGamma = 5; 
     nMCs = 72; 
@@ -98,6 +98,7 @@ def plotFigure4b(sMatrix):
     bar1_y, bar2_y, bar3_y, bar4_y, bar5_y = [], [], [], [], [];      
     nGamma = 5; 
     testOdorID = 0;              #sniff ID of test odor 
+    #from sMatrix, we are getting the first 5 
     for i in range(0, nGamma):
         bar1_y.append(sMatrix[testOdorID+i][0]);
         bar2_y.append(sMatrix[testOdorID+i][4]);

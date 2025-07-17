@@ -32,6 +32,12 @@ def findSImatrixGamma(gammaCode, learnedGammaCode, nOdors, testStartID):
         SImatrixGamma.append([]); 
         for j in range(0, nOdors): 
             similarity = computeSimilarity(gammaCode[i], learnedGammaCode[j]);
+            #this is the most important line
+            # this computes the Jaccard similarity
+            # between testing part of gammaCode
+            # and the learned gammaCode
+            
+            
             SImatrixGamma[k].append(round(similarity, 2));
         k+=1; 
     return SImatrixGamma; 
